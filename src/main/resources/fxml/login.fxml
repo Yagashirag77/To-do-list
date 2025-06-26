@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<!-- Root VBox -->
+<VBox alignment="CENTER" spacing="30" stylesheets="@../css/styles.css"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      prefWidth="800.0" prefHeight="600.0"
+      fx:controller="main.gestion_des_taches.controller.LoginController"
+      styleClass="login-root">
+
+    <!-- Parent avec padding -->
+    <VBox spacing="80" styleClass="login-container">
+
+        <!-- Carte transparente -->
+        <VBox spacing="20" styleClass="card-login">
+
+            <Label text="Connexion" styleClass="title"/>
+
+            <TextField fx:id="emailField" promptText="Email" styleClass="input-field"/>
+            <PasswordField fx:id="passwordField" promptText="Mot de passe" styleClass="input-field"/>
+
+            <Button text="Se connecter" onAction="#seConnecter" styleClass="login-button"/>
+            <Label fx:id="errorLabel" styleClass="label-error"/>
+
+            <Hyperlink text="Créer un compte" onAction="#allerVersRegister" styleClass="hyperlink"/>
+
+        </VBox>
+
+    </VBox>
+
+</VBox>

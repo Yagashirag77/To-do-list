@@ -1,0 +1,201 @@
+/* ===== Variables Pastel Modernes ===== */
+.root {
+    -primary-color: #41B3A3;
+    -secondary-color: #85DCB5;
+    -accent-color: #E27D60;
+    -neutral-light: #fdfdfd;
+    -neutral-medium: #eeeeee;
+    -neutral-dark: #2c3e50;
+    -error-color: #C38D9E;
+    -highlight-color: #E8A87C;
+    -shadow-light: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0.2, 0, 2);
+    -shadow-heavy: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0.3, 0, 4);
+}
+
+/* ===== Style Global ===== */
+.root {
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, -primary-color, -secondary-color);
+}
+
+/* ===== Cards ===== */
+.login-container {
+    -fx-padding: 0 50 0 50;
+}
+
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 18;
+    -fx-padding: 20 40 20 40;
+    -fx-effect: -shadow-light;
+    -fx-spacing: 20;
+}
+
+.card-login {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 20;
+    -fx-padding: 40 50 40 50;
+    -fx-effect: -shadow-heavy;
+}
+
+/* ===== Titres ===== */
+.title {
+    -fx-font-size: 28px;
+    -fx-text-fill: -neutral-dark;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: derive(-neutral-dark, 40%);
+}
+
+/* ===== Champs de Formulaires ===== */
+.input-field, .text-field, .password-field, .combo-box, .date-picker {
+    -fx-background-color: -neutral-light;
+    -fx-border-color: derive(-primary-color, 50%);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 12 18;
+    -fx-font-size: 14px;
+    -fx-effect: -shadow-light;
+}
+
+.input-field:focused, .text-field:focused, .password-field:focused {
+    -fx-border-color: -accent-color;
+    -fx-effect: -shadow-heavy;
+}
+
+/* ===== Boutons ===== */
+.button, .button-add, .login-button {
+    -fx-background-color: linear-gradient(to right, -accent-color, -highlight-color);
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 15px;
+    -fx-padding: 12 30;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-effect: -shadow-light;
+}
+
+.button:hover, .button-add:hover, .login-button:hover {
+    -fx-background-color: -accent-color;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Bouton Danger */
+.button-danger {
+    -fx-background-color: -error-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+}
+
+.button-danger:hover {
+    -fx-background-color: derive(-error-color, -20%);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, derive(-primary-color, -20%), -primary-color);
+    -fx-padding: 30 20;
+    -fx-spacing: 20;
+    -fx-effect: -shadow-heavy;
+    -fx-border-radius: 0 20 20 0;
+}
+
+.sidebar-header {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+.task-completed {
+    -fx-background-color: rgba(133, 220, 181, 0.3); /* vert pastel très léger */
+    -fx-text-fill: derive(-neutral-dark, 40%);
+    -fx-strikethrough: true; /* texte barré */
+    -fx-font-style: italic;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+}
+
+
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-translate-x: 4;
+}
+
+/* ===== ListView ===== */
+.list-view {
+    -fx-background-color: -neutral-light;
+    -fx-border-color: derive(-primary-color, 50%);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: -shadow-light;
+}
+
+.list-view .list-cell {
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+    -fx-text-fill: -neutral-dark;
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #f2f2f2;
+}
+
+/* ===== Label Error ===== */
+.label-error {
+    -fx-text-fill: -error-color;
+    -fx-font-size: 13px;
+}
+
+/* ===== Hyperlinks ===== */
+.hyperlink {
+    -fx-text-fill: -accent-color;
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+    -fx-text-fill: -highlight-color;
+}
+
+/* ===== TableView ===== */
+.table-view {
+    -fx-background-color: -neutral-light;
+    -fx-border-color: derive(-primary-color, 40%);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: -shadow-light;
+}
+
+.table-view .column-header {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f7f7f7;
+}
+
+/* ===== Tooltip ===== */
+.tooltip {
+    -fx-background-color: -neutral-light;
+    -fx-text-fill: -neutral-dark;
+    -fx-border-color: derive(-primary-color, 50%);
+    -fx-border-radius: 8;
+    -fx-padding: 8 12;
+}

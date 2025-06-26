@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.gestion_des_taches.controller.TachesSansProjetController"
+            stylesheets="@../css/styles.css">
+
+    <left>
+        <VBox spacing="10" styleClass="sidebar">
+            <Label text="To-Do List" styleClass="sidebar-header"/>
+            <Button text="Accueil" onAction="#allerAccueil" styleClass="nav-button"/>
+            <Button text="Projets" onAction="#allerProjets" styleClass="nav-button"/>
+            <Button text="Tâches" onAction="#allerTaches" styleClass="nav-button"/>
+            <Button text="Labels" onAction="#allerLabels" styleClass="nav-button"/>
+            <Button text="Catégories" onAction="#allerCategories" styleClass="nav-button"/>
+            <Button text="Déconnexion" onAction="#seDeconnecter" styleClass="nav-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="CENTER" spacing="30" styleClass="card">
+            <Label text="Tâches Sans Projet" styleClass="title"/>
+            <ListView fx:id="tacheListView" prefHeight="300" prefWidth="400" styleClass="list-view"/>
+            <TextField fx:id="nouvelleTacheField" promptText="Modifier le titre de la tâche" styleClass="input-field"/>
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Modifier" onAction="#modifierTache" styleClass="button"/>
+                <Button text="Supprimer" onAction="#supprimerTache" styleClass="button-danger"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

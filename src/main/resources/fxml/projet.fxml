@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      prefWidth="800.0" prefHeight="600.0"
+      fx:controller="main.gestion_des_taches.controller.ProjetController"
+      alignment="CENTER" spacing="20"
+      stylesheets="@../css/styles.css"
+      styleClass="card">
+
+    <Label text="Créer un Nouveau Projet" styleClass="title"/>
+
+    <TextField fx:id="nomField" promptText="Nom du projet" styleClass="input-field"/>
+    <TextArea fx:id="descriptionField" promptText="Description du projet" styleClass="input-field" prefRowCount="4"/>
+
+    <Label text="Tâches du projet" styleClass="subtitle"/>
+
+    <ListView fx:id="listeTaches" prefHeight="200" styleClass="list-view"/>
+
+    <HBox spacing="15" alignment="CENTER">
+<!--        <Button text="Ajouter une Tâche" onAction="#ajouterTacheAuProjet" styleClass="button"/>-->
+        <Button fx:id="addButton" text="Créer Projet" onAction="#creerProjet" styleClass="button-add"/>
+    </HBox>
+
+</VBox>
